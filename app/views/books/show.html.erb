@@ -1,0 +1,53 @@
+<%= render 'shared/header'%>
+
+<div class="book-detail">
+<div class="book-upper-content">
+  <div class="reading-book">
+      <div class="reading-book-image">
+        <%=image_tag  @book.image_url %>
+      </div>
+        <div class="reading-book-item title-font">
+          <%= @book.title%>
+        </div>
+        <div class="book-item author-font">
+          <%= @book.author%>
+        </div>
+    <%=link_to 'delete', book_path(@book.id), method: :delete, class: "  btn btn-url" %>
+  </div>
+
+    <div class ="memo-form" >
+      <%=form_with medel: [@book, @memo], url: "/books/#{@book.id}/memos",method: :post,  local: true do |f| %>
+        <div class="weight-bold-text">
+          TITLE
+        </div>
+        <%= f.text_area :title, rows: "1", class: "title" %>
+        <div class="weight-bold-text">
+          MEMO
+        </div>
+        <%= f.text_area :text, rows: "5", class: "text" %>
+        <%= f.submit 'send', class: "memo-send-btn btn btn-url" %>
+      <% end %>
+    </div>
+</div>
+
+
+  <div class="memo">
+  <% if @memos %>
+    <% @memos.each do |memo| %>
+      <div class="memo-container" >
+        <div class="memo-title">
+          <span class="title"><%=memo.title %></span>
+        </div>
+        <div class="memo-text">
+          <p><%= memo.text %></p>
+      <div class="memo-link">
+          <%=link_to 'destroy', "/books/#{memo.book.id}/memos/#{memo.id}", method: :delete %>
+          <%=link_to 'edit', "/books/#{memo.book.id}/memos/#{memo.id}/edit", class: "post-edit"%>
+        </div>
+      </div>
+      </div>
+    <% end %>
+  <% end %>
+  </div>
+     
+</div>

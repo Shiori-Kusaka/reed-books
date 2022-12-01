@@ -1,0 +1,36 @@
+<%# CSS・・・assets/stylesheets/shared/header.css %>
+<nav class="gnav" class="fixed">
+      <ul class="gnav-list">
+      <% if user_signed_in? %>
+        <li class="gnav-item">
+          <%=link_to 'LOGOUT',destroy_user_session_path, method: :delete,  class: 'gnav-item gnav-link'%>
+        </li>
+        <li class="gnav-item">
+          <%=link_to 'READING', books_path, class: 'gnav-link' %>
+        </li>
+        <li class="gnav-item">
+          <%=link_to 'SEARCH', search_path, class: 'gnav-link' %>
+        </li>
+        <li class="gnav-item"><a class="gnav-link" href="#">BOOK LOG</a></li>
+        <li class="gnav-item">
+          <%=link_to 'READING', books_path, class: 'gnav-link' %>
+        </li>
+      <% else %>
+        <li class="gnav-item">
+          <%=link_to 'SIGN UP',new_user_registration_path, class: 'gnav-item gnav-link'%>
+        </li>
+        <li class="gnav-item">
+          <%=link_to 'LOGIN',new_user_session_path, class: 'gnav-link'%>
+        </li>
+        <li class="gnav-item">
+          <%=link_to 'GEST LOGIN', users_guest_sign_in_path, method: :post,  class: 'gnav-link'%>
+        </li>
+      <% end %>
+      <li class="gnav-item gnav-link">
+      <% if user_signed_in?%>
+        <%= current_user.name %>
+      <% end %>
+      </li>
+      </ul>
+    </nav>
+

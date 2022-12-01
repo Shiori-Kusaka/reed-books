@@ -1,0 +1,14 @@
+<div class="container" >
+    <div class ="memo-form" >
+      <%=form_with medel: [@book, @memo], url: "/books/#{@book.id}/memos/#{@memo.id}",method: :patch,  id: "form" do |f| %>
+        <div class="weight-bold-text">
+          TITLE
+        </div>
+        <%= f.text_area :title, rows: "1", id: "title", value: @memo.title %>
+        <div class="weight-bold-text">
+          MEMO
+        </div>
+        <%= f.text_area :text, rows: "2", id: "content", value: @memo.text %>
+        <%= f.submit 'send', id:"submit" %>
+      <% end %>
+    </div>

@@ -1,0 +1,82 @@
+/* Fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400);
+
+/* fontawesome */
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.content {
+  z-index: 100;
+  padding-top: 68px;
+  width: 100%;
+  margin: 0 auto;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-family:"Open sans", sans-serif;
+}
+
+.search-box {
+  text-align: center;
+}
+
+.search-input {
+  width: 50%;
+  height: 30px;
+}
+
+.btn-search {
+  margin-left: 10px;
+  height: 30px;
+  color: white;
+  background-color: #5da67f;
+}
+
+h2 {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.search_results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0 50px;
+}
+
+.book {
+  margin-top: 40px;
+  padding-left: 20px;
+  width: 25%;
+  text-align: center;
+}
+
+.book_title {
+  word-wrap: break-word;
+  padding-bottom: 10px;
+}
+
+.check-btn {
+  color: #ECD8D7;
+  background-color: #A6615D;
+}
+
+.check-btn:hover {
+  margin-top: 3px;
+  color: #fff;
+  background: #9A8D8C;
+  border-bottom: 2px solid #9A8D8C;
+}
+
+/*media Queries 767
+----------------------------------------------------*/
+@media screen and (max-width: 767px) {
+  .book {
+    width: 50%;
+  }
+}

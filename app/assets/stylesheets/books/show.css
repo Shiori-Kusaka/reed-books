@@ -1,0 +1,126 @@
+
+
+@media screen and (min-width: 768px) {
+  .book-upper-content {
+    display: flex;
+  }
+  
+  .book-detail {
+    padding-left: 50px;
+  }
+  
+  .reading-book-item {
+    width: 100%;
+  }
+  
+  .memo-form {
+    padding-top: 100px;
+    padding-left: 300px;
+  }
+  
+  .title {
+    /* width: 40vw; */
+    width: 300%;
+    height: 5vh;
+    margin-bottom: 30px;
+    padding: 5px;
+  }
+  
+  .text {
+    width: 300%;
+    height: 35vh;
+    margin-bottom: 20px;
+    padding: 5px;
+  }
+}
+
+/*media Queries 767
+----------------------------------------------------*/
+@media screen and (max-width: 767px) {
+  .book-upper-content {
+    display: flex;
+    flex-direction: column;
+    /* flex-direction: column; */
+    /* align-items: center; */
+  } 
+  
+  .memo-form {
+    padding-top: 50px;
+    padding-left: 30px;
+  }
+  
+  .title {
+    width: 80%;
+    height: 5vh;
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+  
+  .text {
+    width: 80%;
+    height: 35vh;
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+  
+  .memo {
+    padding-left: 30px;
+  }
+
+  .memo-send-btn {
+    display: block;
+  }
+
+  .memo-title {
+    width: 80%;
+    /* position: relative; */
+    border: solid 3px #95ccff;
+    border-radius: 8px;
+    background-color: white;
+  }  
+
+  .memo-text  {
+    width: 80%;
+    /* position: relative; */
+    border: solid 3px #95ccff;
+    border-radius: 8px;
+    background-color: white;
+  }
+}
+
+
+.memo-send-btn {
+  border: none; 
+}
+
+.memo {
+  padding-top: 30px;
+}
+
+.memo-text {
+  width: 80%;
+  position: relative;
+  margin: 2em 0;
+  padding: 0.5em 1em;
+  border: solid 3px #95ccff;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.memo-text .memo-title {
+  position: absolute;
+  display: inline-block;
+  top: -13px;
+  left: 10px;
+  padding: 0 9px;
+  line-height: 1;
+  font-size: 19px;
+  /* background: #FFF; */
+  color: #95ccff;
+  font-weight: bold;
+}
+
+.memo-container p {
+  margin: 0; 
+  padding: 0;
+}
